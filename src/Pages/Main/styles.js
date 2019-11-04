@@ -13,7 +13,9 @@ export const Form = styled.View`
   border-color: #eee;
 `;
 
-export const Input = styled.TextInput`
+export const Input = styled.TextInput.attrs({
+  placeholderTextColor: '#999',
+})`
   flex: 1;
   height: 40px;
   background: #eee;
