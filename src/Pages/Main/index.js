@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Container, Form, Input, SubmitButton } from './styles';
+import {Container, Form, Input, SubmitButton} from './styles';
 
 export default class Main extends Component {
   state = {
@@ -13,7 +13,7 @@ export default class Main extends Component {
   };
 
   render() {
-    const { users, newUser } = this.state;
+    const {users, newUser} = this.state;
     return (
       <Container>
         <Form>
@@ -22,7 +22,9 @@ export default class Main extends Component {
             autoCapitalize="none"
             placeholder="Adicionar usuário"
             value={newUser}
-            onChangeText={text => this.setState({ newUser: text })}
+            onChangeText={text => this.setState({newUser: text})}
+            returnKeyType="send"
+            onSubmitEditing={this.handleAddUser}
           />
           <SubmitButton onPress={this.handleAddUser}>
             <Icon name="add" size={20} color="#FFF" />
