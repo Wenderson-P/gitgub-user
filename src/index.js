@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {StyleSheet, View, Text} from 'react-native';
+import './config/ReactotronConfig';
 
 const styles = StyleSheet.create({
   container: {
@@ -10,6 +11,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5fcff',
   },
 });
+console.tron.log('Hello world');
 
 export default function App() {
   return (
