@@ -31,3 +31,10 @@ export const Bio = styled.Text`
   margin-top: 5px;
   text-align: center;
 `;
+
+export const Stars = styled.FlatList``;
+export const Starred = styled.View``;
+export const OwnerAvatar = styled.Image``;
+export const Info = styled.View``;
+export const Title = styled.Text``;
+export const Author = styled.Text``;
