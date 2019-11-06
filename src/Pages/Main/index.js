@@ -66,6 +66,13 @@ export default class Main extends Component {
     navigation.navigate('User', {user});
   };
 
+  handleDeleteUser = user => {
+    const {users} = this.state;
+    this.setState({
+      users: users.filter(userInArray => userInArray !== user),
+    });
+  };
+
   render() {
     const {users, newUser, loading} = this.state;
     return (
@@ -93,7 +100,7 @@ export default class Main extends Component {
           keyExtractor={user => user.login}
           renderItem={({item}) => (
             <User>
-              <RemoveButton>
+              <RemoveButton onPress={() => this.handleDeleteUser(item)}>
                 <Icon name="delete" size={25} color="#ff6600" />
               </RemoveButton>
               <Avatar source={{uri: item.avatar}} />
