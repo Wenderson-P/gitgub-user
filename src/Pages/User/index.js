@@ -36,6 +36,12 @@ export default class User extends Component {
     this.setState({stars: response.data, loading: false});
   }
 
+  handleNavigate = repository => {
+    const {navigation} = this.props;
+    const repositoryUrl = repository.html_url;
+    navigation.navigate('Repository', {repositoryUrl});
+  };
+
   render() {
     const {navigation} = this.props;
     const {stars, loading} = this.state;
@@ -54,7 +60,7 @@ export default class User extends Component {
             data={stars}
             keyExtractor={star => String(star.id)}
             renderItem={({item}) => (
-              <Starred>
+              <Starred onPress={() => this.handleNavigate(item)}>
                 <OwnerAvatar source={{uri: item.owner.avatar_url}} />
                 <Info>
                   <Title>{item.name}</Title>
