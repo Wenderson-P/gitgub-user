@@ -14,7 +14,7 @@ export default class User extends Component {
 
   async componentDidMount() {
     const {navigation} = this.props;
-    const user = navigation.getParams('user');
+    const user = navigation.getParam('user');
 
     const response = await api.get(`users/${user.login}/starred`);
 
