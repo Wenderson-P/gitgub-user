@@ -19,12 +19,12 @@ export default class User extends Component {
 
     const response = await api.get(`users/${user.login}/starred`);
 
-    this.state({stars: response.data});
+    this.setState({stars: response.data});
   }
 
   render() {
     const {navigation} = this.props;
-    const {stars} = this.props;
+    const {stars} = this.state;
     const user = navigation.getParam('user');
     return (
       <Container>
