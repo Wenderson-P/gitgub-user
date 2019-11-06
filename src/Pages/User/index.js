@@ -39,7 +39,8 @@ export default class User extends Component {
   handleNavigate = repository => {
     const {navigation} = this.props;
     const repositoryUrl = repository.html_url;
-    navigation.navigate('Repository', {repositoryUrl});
+    const repositoryName = repository.name;
+    navigation.navigate('Repository', {repositoryUrl, repositoryName});
   };
 
   render() {
