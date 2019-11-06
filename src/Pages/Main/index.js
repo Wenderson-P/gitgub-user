@@ -11,7 +11,6 @@ import {
   List,
   User,
   RemoveButton,
-  RemoveButtonText,
   Avatar,
   Name,
   Bio,
@@ -121,7 +120,7 @@ Main.navigationOptions = {
   title: 'Main page',
 };
 
-Main.prototypes = {
+Main.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func,
   }).isRequired,
