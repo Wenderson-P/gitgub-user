@@ -10,6 +10,8 @@ import {
   SubmitButton,
   List,
   User,
+  RemoveButton,
+  RemoveButtonText,
   Avatar,
   Name,
   Bio,
@@ -91,6 +93,9 @@ export default class Main extends Component {
           keyExtractor={user => user.login}
           renderItem={({item}) => (
             <User>
+              <RemoveButton>
+                <Icon name="delete" size={25} color="#ff6600" />
+              </RemoveButton>
               <Avatar source={{uri: item.avatar}} />
               <Name>{item.name}</Name>
               <Bio>{item.bio}</Bio>

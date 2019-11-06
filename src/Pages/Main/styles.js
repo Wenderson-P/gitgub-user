@@ -38,7 +38,11 @@ export const List = styled.FlatList.attrs({
 })`
   margin-top: 20px;
 `;
+export const RemoveButton = styled(RectButton)`
+  align-self: flex-end;
+`;
 
+export const RemoveButtonText = styled.Text``;
 export const User = styled.View`
   align-items: center;
   margin: 0 20px 30px;
