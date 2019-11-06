@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Keyboard, ActivityIndicator} from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
+import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {
   Container,
@@ -106,4 +107,10 @@ export default class Main extends Component {
 
 Main.navigationOptions = {
   title: 'Main page',
+};
+
+Main.prototypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
 };
