@@ -1,12 +1,12 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import {StatusBar} from 'react-native';
 import './config/ReactotronConfig';
 import Routes from './routes';
 
 export default function App() {
   return (
     <>
-      <StatusBar barStyle="ligth-content" backgroundColor="#7159c1" />
+      <StatusBar barStyle="ligth-content" backgroundColor="#3f72af" />
       <Routes />
     </>
   );

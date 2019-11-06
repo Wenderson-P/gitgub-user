@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Keyboard, ActivityIndicator} from 'react-native';
+import React, { Component } from 'react';
+import { Keyboard, ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -29,12 +29,12 @@ export default class Main extends Component {
   async componentDidMount() {
     const users = await AsyncStorage.getItem('users');
     if (users) {
-      this.setState({users: JSON.parse(users)});
+      this.setState({ users: JSON.parse(users) });
     }
   }
 
   async componentDidUpdate(_, prevState) {
-    const {users} = this.state;
+    const { users } = this.state;
 
     if (prevState.users !== users) {
       AsyncStorage.setItem('users', JSON.stringify(users));
@@ -42,8 +42,8 @@ export default class Main extends Component {
   }
 
   handleAddUser = async () => {
-    const {users, newUser} = this.state;
-    this.setState({loading: true});
+    const { users, newUser } = this.state;
+    this.setState({ loading: true });
     const response = await api.get(`/users/${newUser}`);
     const data = {
       name: response.data.name,
@@ -61,19 +61,19 @@ export default class Main extends Component {
   };
 
   handleNavigate = user => {
-    const {navigation} = this.props;
-    navigation.navigate('User', {user});
+    const { navigation } = this.props;
+    navigation.navigate('User', { user });
   };
 
   handleDeleteUser = user => {
-    const {users} = this.state;
+    const { users } = this.state;
     this.setState({
       users: users.filter(userInArray => userInArray !== user),
     });
   };
 
   render() {
-    const {users, newUser, loading} = this.state;
+    const { users, newUser, loading } = this.state;
     return (
       <Container>
         <Form>
@@ -82,7 +82,7 @@ export default class Main extends Component {
             autoCapitalize="none"
             placeholder="Adicionar usuário"
             value={newUser}
-            onChangeText={text => this.setState({newUser: text})}
+            onChangeText={text => this.setState({ newUser: text })}
             returnKeyType="send"
             onSubmitEditing={this.handleAddUser}
           />
@@ -90,19 +90,19 @@ export default class Main extends Component {
             {loading ? (
               <ActivityIndicator color="#fff" />
             ) : (
-              <Icon name="add" size={20} color="#FFF" />
-            )}
+                <Icon name="add" size={20} color="#FFF" />
+              )}
           </SubmitButton>
         </Form>
         <List
           data={users}
           keyExtractor={user => user.login}
-          renderItem={({item}) => (
+          renderItem={({ item }) => (
             <User>
               <RemoveButton onPress={() => this.handleDeleteUser(item)}>
                 <Icon name="delete" size={25} color="#ff6600" />
               </RemoveButton>
-              <Avatar source={{uri: item.avatar}} />
+              <Avatar source={{ uri: item.avatar }} />
               <Name>{item.name}</Name>
               <Bio>{item.bio}</Bio>
               <ProfileButton onPress={() => this.handleNavigate(item)}>
