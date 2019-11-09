@@ -78,7 +78,7 @@ export default class User extends Component {
 
   render() {
     const {navigation} = this.props;
-    const {stars, loading} = this.state;
+    const {stars, loading, refreshing} = this.state;
     const user = navigation.getParam('user');
     return (
       <Container>
@@ -96,7 +96,7 @@ export default class User extends Component {
             onEndReachedThreshold={0.25}
             onEndReached={this.loadMore}
             onRefresh={this.refreshList}
-            refreshing={this.state.refreshing}
+            refreshing={refreshing}
             renderItem={({item}) => (
               <Starred onPress={() => this.handleNavigate(item)}>
                 <OwnerAvatar source={{uri: item.owner.avatar_url}} />
