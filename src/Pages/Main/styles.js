@@ -39,14 +39,22 @@ export const List = styled.FlatList.attrs({
 })`
   margin-top: 20px;
 `;
-export const RemoveButton = styled(RectButton)`
+export const AvatarBadgeRemoveButton = styled(RectButton)`
   align-self: flex-end;
+  background-color: white;
+  border-radius: 50;
 `;
 
-export const RemoveButtonText = styled.Text``;
 export const User = styled.View`
   align-items: center;
   margin: 0 20px 30px;
+`;
+
+export const AvatarBadge = styled.View`
+  width: 30%;
+  flex: 1;
+  position: absolute;
+  z-index: 10;
 `;
 
 export const Avatar = styled.Image`
