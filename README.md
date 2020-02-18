@@ -74,13 +74,13 @@ $ Npm version
 ```
 git clone https://github.com/your_username_/Project-Name.git
 ```
-2. Install dependencies packages with npm or yarn
+2. Install dependencies packages with npm or yarn<br/>
 ```yarn install```
     or
 ```npm install```
 
-3. Install the app
+3. Install the app<br/>
 ```react native run-android```
 
-4. Run metro bundler
+4. Run metro bundler<br/>
 ```react native start```
