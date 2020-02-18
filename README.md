@@ -74,8 +74,10 @@ $ Npm version
 ```
 git clone https://github.com/your_username_/Project-Name.git
 ```
-2. Install npm/yarn packages ( you can use both)
+2. Install dependencies packages with npm or yarn
 ```yarn install```
+    or
+```npm install```
 
 3. Install the app
 ```react native run-android```
