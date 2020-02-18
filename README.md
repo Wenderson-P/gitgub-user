@@ -3,7 +3,17 @@
   <h2 align="center">Github Repositories</h2>
 </p>
 
-## About the project
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+
+* [About the Project](#-about-the-project)
+  * [Made With](#-made-with)
+  * [Demo](#-demo)
+* [Getting Started](#getting-started)
+  * [Requirements](#-requirements)
+  * [Installation](#-installation)
+
+## 📜 About the project
 A project made with React Native using the GitHub API. You can type in a GitHub username and see all the repositories this user has favorited.
 
 In this study project, I focused on 4 features.
@@ -12,7 +22,7 @@ In this study project, I focused on 4 features.
 * Pull to refresh
 * WebView
 
-### Made with 
+## 🔎 Made with 
 
 - [React Native](http://facebook.github.io/react-native/) 
 - [React Navigation](https://reactnavigation.org/) 
@@ -39,6 +49,36 @@ In this study project, I focused on 4 features.
 
 
 
-### DEMO
-![githubUser](https://user-images.githubusercontent.com/52503774/72258921-07594180-35ee-11ea-9d7e-71cb8213d91f.gif)
+## 📱 DEMO
+<p align="center">
+<img src="https://user-images.githubusercontent.com/52503774/72258921-07594180-35ee-11ea-9d7e-71cb8213d91f.gif" width="300" height="500" />
+ </p>
+ 
+## Getting Started
 
+## 📋 Requirements
+You will need a configured environment of react native,yarn,node and npm must also be up to date, you can check their versions with the following commands :
+
+$ node version
+> v0.10.16
+
+$ yarn --version
+> 1.21.1
+
+$ Npm version
+> 6.9.0
+
+## 🔌 Installation
+
+1. Clone the repo
+```
+git clone https://github.com/your_username_/Project-Name.git
+```
+2. Install npm/yarn packages ( you can use both)
+```yarn install```
+
+3. Install the app
+```react native run-android```
+
+4. Run metro bundler
+```react native start```
